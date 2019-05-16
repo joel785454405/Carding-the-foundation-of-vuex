@@ -6,7 +6,7 @@
         <span>{{item.price}}</span>/
         <span>{{item.inventory}}</span>
         <br>
-        <button @click="addProducts(item)">加入购物车</button>
+        <button :disabled="item.inventory<1" @click="addProducts(item)">加入购物车</button>
       </li>
     </ul>
   </div>
